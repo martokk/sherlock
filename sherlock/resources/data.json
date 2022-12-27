@@ -104,14 +104,6 @@
     "username_claimed": "blue",
     "username_unclaimed": "noonewould"
   },
-  "Arduino": {
-    "errorType": "status_code",
-    "regexCheck": "^(?![_-])[A-Za-z0-9_-]{3,}$",
-    "url": "https://create.arduino.cc/projecthub/{}",
-    "urlMain": "https://www.arduino.cc/",
-    "username_claimed": "blue",
-    "username_unclaimed": "noonewould"
-  },
   "ArtStation": {
     "errorType": "status_code",
     "url": "https://www.artstation.com/{}",
@@ -226,6 +218,7 @@
     "username_claimed": "Eyes_Wide_Shut",
     "username_unclaimed": "hihowareyou101"
   },
+
   "BioHacking": {
     "errorType": "status_code",
     "url": "https://forum.dangerousthings.com/u/{}",
@@ -365,16 +358,6 @@
     "username_claimed": "cute18cute",
     "username_unclaimed": "noonewouldeverusethis77777"
   },
-  "Chess": {
-    "errorMsg": "Username is valid",
-    "errorType": "message",
-    "regexCheck": "^[a-z1-9]{3,25}$",
-    "url": "https://www.chess.com/member/{}",
-    "urlMain": "https://www.chess.com/",
-    "urlProbe": "https://www.chess.com/callback/user/valid?username={}",
-    "username_claimed": "blue",
-    "username_unclaimed": "noonewouldeverusethis7"
-  },
   "CloudflareCommunity": {
     "errorType": "status_code",
     "url": "https://community.cloudflare.com/u/{}",
@@ -406,21 +389,7 @@
     "username_claimed": "blue",
     "username_unclaimed": "noonewouldeverusethis7"
   },
-  "Crowdin": {
-    "errorType": "status_code",
-    "regexCheck": "^[a-zA-Z0-9._-]{2,255}$",
-    "url": "https://crowdin.com/profile/{}",
-    "urlMain": "https://crowdin.com/",
-    "username_claimed": "blue",
-    "username_unclaimed": "noonewouldeverusethis7"
-  },
-  "Cryptomator Forum": {
-    "errorType": "status_code",
-    "url": "https://community.cryptomator.org/u/{}",
-    "urlMain": "https://community.cryptomator.org/",
-    "username_claimed": "michael",
-    "username_unclaimed": "noonewouldeverusethis7"
-  },
+
   "Cults3D": {
     "errorMsg": "Oh dear, this page is not working!",
     "errorType": "message",
@@ -453,6 +422,13 @@
     "username_claimed": "blue",
     "username_unclaimed": "noonewouldeverusethis7"
   },
+  "Empflix": {
+    "errorType": "status_code",
+    "urlMain": "https://www.empflix.com",
+    "url": "https://www.empflix.com/profile/{}/",
+    "username_claimed": "adam",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
   "Enjin": {
     "errorMsg": "Yikes, there seems to have been an error. We've taken note and will check out the problem right away!",
     "errorType": "message",
@@ -468,6 +444,16 @@
     "username_claimed": "enabled",
     "username_unclaimed": "noonewouldeverusethis7"
   },
+  "Eporner": {
+    "errorType": "message",
+    "errorMsg": [
+        "<strong>Profile not found.</strong>"
+    ],
+    "url": "https://www.eporner.com/profile/{}/",
+    "urlMain": "https://www.eporner.com/",
+    "username_claimed": "adam",
+    "username_unclaimed": "noonewouldeverusethis7"
+    },
   "Etsy": {
     "errorType": "status_code",
     "url": "https://www.etsy.com/shop/{}",
@@ -491,12 +477,24 @@
     "username_unclaimed": "noonewouldeverusethis7"
   },
   "Facebook": {
-    "errorType": "status_code",
+    "errorType": "message",
+    "errorMsg": "userID",
     "regexCheck": "^[a-zA-Z0-9\\.]{3,49}(?<!\\.com|\\.org|\\.net)$",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+     },
     "url": "https://www.facebook.com/{}",
     "urlMain": "https://www.facebook.com/",
-    "urlProbe": "https://www.facebook.com/{}/videos/",
     "username_claimed": "hackerman",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "FanCentro": {
+    "errorMsg": "404",
+    "errorType": "message",
+    "url": "https://fancentro.com/{}",
+    "urlMain": "https://fancentro.com/",
+    "username_claimed": "nielsrosanna",
     "username_unclaimed": "noonewouldeverusethis7"
   },
   "Fandom": {
@@ -532,6 +530,17 @@
     "url": "https://www.flickr.com/people/{}",
     "urlMain": "https://www.flickr.com/",
     "username_claimed": "blue",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "Friendfinder-x": {
+    "errorType": "message",
+    "errorMsg": "<title>Register to Find Free Sex Online - FriendFinder-x</title>",
+    "absenceStrs": [
+        "friendfinder-x.com/p/register.cgi"
+    ],
+    "url": "https://www.friendfinder-x.com/profile/{}",
+    "urlMain": "https://www.friendfinder-x.com/",
+    "username_claimed": "uehkon89",
     "username_unclaimed": "noonewouldeverusethis7"
   },
   "Giphy": {
@@ -612,6 +621,14 @@
     "urlMain": "https://hubski.com/",
     "username_claimed": "blue",
     "username_unclaimed": "noonewouldeverusethis7"
+  },
+ 
+  "imginn": {
+    "errorType": "status_code",
+    "url": "https://imginn.org/{}/",
+    "urlMain": "https://imginn.org/",
+    "username_claimed": "solimar_prettygrandma",
+    "username_unclaimed": "noonewouldeverusethis"
   },
  
   "ImgUp.cz": {
@@ -718,12 +735,12 @@
     "username_unclaimed": "noonewouldeverusethis7"
   },
  
-  "Lichess": {
-    "errorMsg": "Page not found!",
+  "Likee": {
+    "errorMsg": "https://likee.video/@/",
     "errorType": "message",
-    "url": "https://lichess.org/@/{}",
-    "urlMain": "https://lichess.org",
-    "username_claimed": "blue",
+    "url": "https://likee.video/@{}",
+    "urlMain": "https://likee.video",
+    "username_claimed": "adam",
     "username_unclaimed": "noonewouldeverusethis7"
   },
   "Linktree": {
@@ -741,6 +758,15 @@
     "username_claimed": "listed",
     "username_unclaimed": "noonewouldeverusethis7"
   },
+  "LiveJasmine": {
+    "errorType": "message",
+    "errorMsg": "[]",
+    "url": "https://www.livejasmine.com/{}",
+    "urlMain": "https://www.livejasmin.com/",
+    "urlProbe": "https://www.livejasmin.com/en/flash/get-performer-details/{}",
+    "username_claimed": "test",
+    "username_unclaimed": "noonewouldeverusethis77"
+  },
   "LiveJournal": {
     "errorType": "status_code",
     "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
@@ -757,21 +783,12 @@
     "username_claimed": "jcs",
     "username_unclaimed": "noonewouldeverusethis7"
   },
-  "Lolchess": {
-    "errorMsg": "No search results",
-    "errorType": "message",
-    "url": "https://lolchess.gg/profile/na/{}",
-    "urlMain": "https://lolchess.gg/",
-    "username_claimed": "blue",
-    "username_unclaimed": "noonewouldeverusethis7"
-  },
-  "Medium": {
-    "errorMsg": "<body",
-    "errorType": "message",
-    "url": "https://medium.com/@{}",
-    "urlMain": "https://medium.com/",
-    "urlProbe": "https://medium.com/feed/@{}",
-    "username_claimed": "blue",
+  "Modelhub": {
+    "errorType": "status_code",
+    "isNSFW": true,
+    "url": "https://www.modelhub.com/{}",
+    "urlMain": "https://modelhub.com/",
+    "username_claimed": "yummy-couple",
     "username_unclaimed": "noonewouldeverusethis7"
   },
   "Munzee": {
@@ -779,6 +796,14 @@
     "url": "https://www.munzee.com/m/{}",
     "urlMain": "https://www.munzee.com/",
     "username_claimed": "blue",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "ModelMayhem": {
+    "errorType": "message",
+    "errorMsg": "was not found.",
+    "url": "https://modelmayhem.com/{}",
+    "urlMain": "https://modelmayhem.com/",
+    "username_claimed": "3846275",
     "username_unclaimed": "noonewouldeverusethis7"
   },
   "Myspace": {
@@ -797,12 +822,28 @@
     "username_claimed": "ok",
     "username_unclaimed": "noonewouldeverusethis7"
   },
+  "Onlyfinder": {
+    "errorType": "message",
+    "errorMsg": "\"total\":0,",
+    
+    "url": "https://onlyfinder.com/{}/profiles",
+    "urlMain": "https://onlyfinder.com",
+    "urlProbe": "https://onlyfinder.com/json/search?q={}&start=0",
+    "username_claimed": "wilaribeiro",
+    "username_unclaimed": "noonewouldeverusethis7",
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
+        "accept": "application/json, text/javascript, */*; q=0.01",
+        "x-requested-with": "XMLHttpRequest",
+        "cookie": "t=93712308; __cflb=02DiuFyCGPVyrmPMNwK31DjBY5udTKcbYh9HYtAX6rR1n"
+    }
+  },
+
   "OnlyFans": {
     "errorType": "status_code",
     "isNSFW": true,
     "url": "https://onlyfans.com/{}",
     "urlMain": "https://onlyfans.com/",
-    "urlProbe": "https://onlyfans.com/api2/v2/users/{}",
     "username_claimed": "theemilylynne",
     "username_unclaimed": "noonewouldeverusethis7"
   },
@@ -844,6 +885,29 @@
     "username_unclaimed": "noonewouldeverusethis7"
   },
 
+  "PornhubPornstars": {
+    "errorType": "response_url",
+    "errorUrl": "https://www.pornhub.com/pornstars",
+    "isNSFW": true,
+    "url": "https://www.pornhub.com/pornstar/{}",
+    "urlMain": "https://pornhub.com/",
+    "username_claimed": "riley-reid",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "Redgifs": {
+    "errorType": "status_code",
+    "url": "https://www.redgifs.com/users/{}",
+    "urlMain": "https://www.redgifs.com/",
+    "username_claimed": "juicyjswings",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "Redtube": {
+    "errorType": "status_code",
+    "urlMain": "https://www.redtube.com/",
+    "url": "https://www.redtube.com/users/{}",
+    "username_claimed": "adam",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
   "Reddit": {
     "errorMsg": "Sorry, nobody on Reddit goes by that name.",
     "errorType": "message",
@@ -940,9 +1004,12 @@
  
   "TikTok": {
     "errorType": "status_code",
-    "url": "https://tiktok.com/@{}",
-    "urlMain": "https://tiktok.com/",
-    "username_claimed": "red",
+    "url": "https://www.tiktok.com/@{}",
+    "urlMain": "https://www.tiktok.com/",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+    },
+    "username_claimed": "hannakalasky",
     "username_unclaimed": "noonewouldeverusethis7"
   },
   "Tinder": {
@@ -973,7 +1040,7 @@
     "username_claimed": "dingdongyouarewrong",
     "username_unclaimed": "noonewouldeverusethis7"
   },
-  "Twitter": {
+  "Nitter": {
     "errorMsg": "<div class=\"error-panel\"><span>User ",
     "errorType": "message",
     "regexCheck": "^[a-zA-Z0-9_]{1,15}$",
@@ -983,6 +1050,7 @@
     "username_claimed": "blue",
     "username_unclaimed": "noonewouldeveru"
   },
+
   "VK": {
     "errorType": "response_url",
     "errorUrl": "https://www.quora.com/profile/{}",
@@ -1006,13 +1074,28 @@
     "username_claimed": "blue",
     "username_unclaimed": "noonewouldeverusethis7"
   },
- 
+  "xHamster": {
+    "errorType": "message",
+    "errorMsg": "User not found",
+    "urlMain": "https://xhamster.com",
+    "url": "https://xhamster.com/users/{}",
+    "username_claimed": "blue",
+    "username_unclaimed": "noonewouldeverusethis77777"
+  },
   "Xvideos": {
     "errorType": "status_code",
     "isNSFW": true,
     "url": "https://xvideos.com/profiles/{}",
     "urlMain": "https://xvideos.com/",
     "username_claimed": "blue",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "XvideosModels": {
+    "errorType": "status_code",
+    "isNSFW": true,
+    "url": "https://www.xvideos.com/models/{}",
+    "urlMain": "https://xvideos.com/",
+    "username_claimed": "tiffany-tyler",
     "username_unclaimed": "noonewouldeverusethis7"
   },
   "YouNow": {
@@ -1039,7 +1122,17 @@
     "username_claimed": "blue",
     "username_unclaimed": "noonewouldeverusethis77777"
   },
- 
+  "Venmo": {
+    "errorMsg": "Sorry, the page you requested does not exist!",
+    "errorType": "message",
+    "url": "https://venmo.com/u/{}",
+    "urlMain": "https://venmo.com/",
+    "username_claimed": "jenny",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+
+
+
   "chaos.social": {
     "errorType": "status_code",
     "url": "https://chaos.social/@{}",
@@ -1260,6 +1353,163 @@
     "url": "https://www.youtube.com/user/{}",
     "urlMain": "https://www.youtube.com",
     "username_claimed": "pewdiepie",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+
+
+
+
+
+
+
+
+
+
+  "__OF_RESULTS__Coomer": {
+    "errorType": "response_url" ,
+    "errorUrl": "https://coomer.party/artists",
+    "url": "https://coomer.party/onlyfans/user/{}",
+    "urlMain": "https://coomer.party",
+    "username_claimed": "rebeccava",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+
+
+
+
+  "__OF_RESULTS__fansmetrics.com": {
+    "errorType": "response_url" ,
+    "errorUrl": "https://fansmetrics.com/search/{}?tr=n",
+    "url": "https://fansmetrics.com/en/onlyfans/{}",
+    "urlMain": "https://www.fansmetrics.com",
+    "username_claimed": "calibarbie27",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+
+
+
+  "__OF_RESULTS__similarfans.com": {
+    "errorType": "response_url" ,
+    "errorUrl": "https://similarfans.com",
+    "url": "https://similarfans.com/model/{}",
+    "urlMain": "https://www.similarfans.com",
+    "username_claimed": "calibarbie27",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+
+
+
+
+  "__RESULTS__smutty.com": {
+    "errorType": "message",
+    "errorMsg": "404",
+    "url": "https://smutty.com/search/?q={}",
+    "urlMain": "https://www.erome.com",
+    "username_claimed": "emily",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__erome.com": {
+    "errorType": "message",
+    "errorMsg": "No results",
+    "url": "https://www.erome.com/search?q={}",
+    "urlMain": "https://www.erome.com",
+    "username_claimed": "emily",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__facebook.com": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Afacebook.com+%22onlyfans.com%2F{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "kayfires",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__instagram.com": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Ainstagram.com+%22onlyfans.com%2F{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "kayfires",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+    "__RESULTS__twitter.com": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Atwitter.com+%22onlyfans.com%2F{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "kayfires",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__nsfw.xxx": {
+    "errorType": "message",
+    "errorMsg": "No posts found",
+    "url": "https://nsfw.xxx/search?q={}",
+    "urlMain": "https://nsfw.xxx",
+    "username_claimed": "WiCountryCpl",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__porn7.net": {
+    "errorType": "message",
+    "errorMsg": "No posts found",
+    "url": "https://porn7.net/search?q={}",
+    "urlMain": "https://porn7.net",
+    "username_claimed": "WiCountryCpl",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__lewdweb.net": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Alewdweb.net+%22{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "calibarbie",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__sorrymother.video": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Asorrymother.video+%22{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "calibarbie",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__nudostar.com": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Anudostar.com+%22{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "calibarbie",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__pornsavant.com": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Apornsavant.com+%22{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "calibarbie",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__socialmediagirls.com": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Asocialmediagirls.com+%22{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "calibarbie",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__RESULTS__thefappeningblog.com": {
+    "errorType": "message",
+    "errorMsg": "About 0 results",
+    "url": "https://www.google.com/search?q=site%3Athefappeningblog.com+%22{}%22",
+    "urlMain": "https://google.com",
+    "username_claimed": "calibarbie",
+    "username_unclaimed": "noonewouldeverusethis7"
+  },
+  "__SEARCH__CSE_Social_Media": {
+    "errorType": "message",
+    "errorMsg": "No Results",
+    "url": "https://cse.google.com/cse?cx=d14fdc1903c654ee4&q=%22{}%22",
+    "urlMain": "https://cse.google.com/",
+    "username_claimed": "calibarbie",
     "username_unclaimed": "noonewouldeverusethis7"
   }
 }
